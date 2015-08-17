@@ -1,0 +1,29 @@
+pkgname=sidplay-residfp
+
+post_install() {
+  cat << _EOF 
+
+* A default configuration is created in:
+* ~/.config/sidplayfp/sidplayfp.ini
+* on the first run.
+*
+* Edit to suit your needs.
+
+_EOF
+}
+
+post_upgrade() {
+  cat << _EOF 
+
+* A default configuration is now created in:
+* ~/.config/sidplayfp/sidplayfp.ini
+* on the first run.
+*
+* Edit to suit your needs or migrate your old configuration from:
+* ~/.sidplay/sidplay2.ini
+*
+* (taking note of any diffs)
+
+_EOF
+}
+
